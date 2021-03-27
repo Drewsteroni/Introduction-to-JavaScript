@@ -17,7 +17,6 @@ Do the following:
 
    HINT: no function required
 */
-
 let votingAge = "18"
 if (votingAge =>18) {
   console.log (true)
@@ -70,6 +69,7 @@ function multiply(a,b){
 }
 console.log(multiply (4,5))
 
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Age in Dog years
@@ -112,11 +112,38 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight,age){
+  if (age <=0) {
+    console.log("dog undefined")
   }
-
-
+  if (age >=1) {
+    if (weight <=5) {
+      return weight * .05
+      }
+      else if (weight >=6 && weight <=10) {
+      return weight * .04
+      }
+      else if (weight >=11 && weight <=15) {
+      return weight * .03
+      }
+      else if (weight >15) {
+      return weight * .02
+      }
+  }
+  
+  else if (age < 1) {
+    if (age >= (1/6) && age < (1/3)) {
+      return weight * .1
+      }
+    else if (age >= (1/3) && age <(7/12)) {
+      return weight * .05
+      }
+    else if (age >= (7/12) && age <1) {
+      return weight * .04
+      }
+  }
+}  
+console.log(hungryDog(30,.3))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -139,11 +166,39 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+function game(user,computer) {
+  let hand;
+  if (computer <= (1/3)) {
+    hand = "Rock"
+  }
+  else if (computer > (1/3) && computer >= (2/3)) {
+    hand = "Paper"
+  }
+  else (hand = "Scissors")
+
+  if (user === hand) {
+    return "it's a tie"
+  }
+  else if (user === "Rock" && hand === "Paper") {
+    return "you lose!"
+  }
+  else if (user === "Rock" && hand === "Scissors") {
+    return "you win!"
+  }
+  else if (user === "Paper" && hand === "Rock") {
+    return "you win!"
+  }
+  else if (user === "Paper" && hand === "Scissors") {
+    return "you lose!"
+  }
+  else if (user === "Scissors" && hand === "Rock") {
+    return "you lose!"
+  }
+  else if (user === "Scissors" && hand === "Paper") {
+    return "you win!"
+  }
 }
-  
-  
+console.log(game("Rock",Math.random()))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -156,11 +211,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+function miles(km){
+  return km*0.621371;
+}
+console.log(miles(5))
 
 //Task 5b - Feet to CM
 /*
@@ -170,11 +224,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
-
+function feet(cm){
+  return cm*0.0328084;
+}
+console.log(feet(4))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -186,10 +239,11 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
-
+function annoyingSong(b) {
+  for (b; b >0; b--)
+  console.log (b + " bottles of soda on the wall, " + b + " bottles of soda, take one down pass it around " + (b-1) + " bottles of soda on the wall")
+}
+annoyingSong(99)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
