@@ -17,6 +17,7 @@ Do the following:
 
    HINT: no function required
 */
+
 let votingAge = "18"
 if (votingAge =>18) {
   console.log (true)
@@ -68,7 +69,6 @@ function multiply(a,b){
   return a*b;
 }
 console.log(multiply (4,5))
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -143,7 +143,7 @@ function hungryDog(weight,age){
       }
   }
 }  
-console.log(hungryDog(30,.3))
+console.log(hungryDog(15,1))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -198,7 +198,7 @@ function game(user,computer) {
     return "you win!"
   }
 }
-console.log(game("Rock",Math.random()))
+console.log(game("Scissors",Math.random()))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -260,12 +260,28 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(g){
+  if (g >=90 && g <=100) {
+  return 'you got an A'
   }
+  else if (g >=80 && g <=89) {
+  return 'you got a B'
+  }
+  else if (g >=70 && g <=79) {
+  return 'you got a C'
+  }
+  else if (g >=60 && g <=69) {
+  return 'you got a D'
+  }
+  else if (g >=0 && g <=59) {
+  return 'you got an F'
+  }
+  else {
+    return "No Extra Credit!"
+  }
+}
+  console.log(grade(86))
   
-  
-
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
 //Vowel Counter - How many vowels are there?
